@@ -1,0 +1,19 @@
+<br>
+<div class="container">
+  <div *ngFor="let img of completeData" class="gridcnt">
+    <mat-card style="margin-top: 10px;">
+        <mat-card-title>
+          {{img.user.name}}
+        </mat-card-title>
+        <mat-card-content>
+            <img src="{{img.urls.small}}">
+        </mat-card-content>
+        <mat-card-actions style="text-align: center;">
+          <button mat-flat-button color="primary" (click)="viewImage(img)">View</button>
+          <button mat-flat-button color="primary" style="margin-left: 10px;" (click)="downloadImage(img)">Download</button>
+        </mat-card-actions>
+      </mat-card>  
+</div>
+<br>
+<button mat-flat-button color="primary" (click)="loadImage()">More</button>
+</div>
